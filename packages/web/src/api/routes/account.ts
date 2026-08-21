@@ -3,7 +3,7 @@ import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { db } from "../database/index.js";
 import * as schema from "../database/schema.js";
-import { business } from "../middleware/auth.js";
+import { authed, business } from "../middleware/auth.js"; 
 const defaultCategories = [
   "Alimentation",
   "Boissons",
