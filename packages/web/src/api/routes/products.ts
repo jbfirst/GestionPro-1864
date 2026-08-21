@@ -1,9 +1,9 @@
 import { ORPCError } from "@orpc/server";
 import { and, asc, desc, eq, like, lte, or, sql } from "drizzle-orm";
 import { z } from "zod";
-import { db } from "../database";
-import * as schema from "../database/schema";
-import { business } from "../middleware/auth";
+import { db } from "../database/index.js";
+import * as schema from "../database/schema.js";
+import { business } from "../middleware/auth.js";
 
 const productInput = z.object({
   name: z.string().trim().min(2, "Le nom du produit est trop court.").max(120),

@@ -1,9 +1,9 @@
 import { ORPCError } from "@orpc/server";
 import { and, desc, eq, gte, like, lt, or, sql } from "drizzle-orm";
 import { z } from "zod";
-import { db } from "../database";
-import * as schema from "../database/schema";
-import { business } from "../middleware/auth";
+import { db } from "../database/index.js";
+import * as schema from "../database/schema.js";
+import { business } from "../middleware/auth.js";
 
 export const expenseCategories = [
   "Loyer",

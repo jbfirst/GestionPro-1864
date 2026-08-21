@@ -2,8 +2,7 @@
 // and query via: import { db } from "./database";
 import { drizzle } from "drizzle-orm/libsql";
 import { createClient } from "@libsql/client";
-import * as schema from "./schema";
-
+import * as schema from "./schema.js";
 const client = createClient({
   url: process.env.DATABASE_URL!,
   authToken: process.env.DATABASE_AUTH_TOKEN,

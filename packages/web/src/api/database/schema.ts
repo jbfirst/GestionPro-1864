@@ -1,9 +1,8 @@
 import { sql } from "drizzle-orm";
 import { index, integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { user } from "./auth-schema";
+import { user } from "./auth-schema.js";
 
-export * from "./auth-schema";
-
+export * from "./auth-schema.js";
 const timestamp = (name: string) =>
   integer(name, { mode: "timestamp_ms" })
     .notNull()

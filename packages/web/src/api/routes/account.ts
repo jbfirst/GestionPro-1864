@@ -1,10 +1,9 @@
 import { ORPCError } from "@orpc/server";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
-import { db } from "../database";
-import * as schema from "../database/schema";
-import { authed, business } from "../middleware/auth";
-
+import { db } from "../database/index.js";
+import * as schema from "../database/schema.js";
+import { business } from "../middleware/auth.js";
 const defaultCategories = [
   "Alimentation",
   "Boissons",

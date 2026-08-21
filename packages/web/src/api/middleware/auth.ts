@@ -1,9 +1,9 @@
 import { ORPCError } from "@orpc/server";
 import { eq } from "drizzle-orm";
-import { base } from "../__core/app";
-import { auth } from "../auth";
-import { db } from "../database";
-import * as schema from "../database/schema";
+import { base } from "../__core/app.js";
+import { auth } from "../auth.js";
+import { db } from "../database/index.js";
+import * as schema from "../database/schema.js";
 
 /** Auth optionnelle — `context.user` vaut l'utilisateur de session ou null. */
 export const withUser = base.use(async ({ context, next }) => {

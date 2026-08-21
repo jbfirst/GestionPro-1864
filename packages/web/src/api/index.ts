@@ -1,15 +1,15 @@
 import type { RouterClient } from "@orpc/server";
-import { createApp } from "./__core/app";
-import { auth } from "./auth";
-import { account } from "./routes/account";
-import { categories } from "./routes/categories";
-import { customers } from "./routes/customers";
-import { dashboard } from "./routes/dashboard";
-import { expenses } from "./routes/expenses";
-import { ping } from "./routes/ping";
-import { products } from "./routes/products";
-import { reports } from "./routes/reports";
-import { sales } from "./routes/sales";
+import { createApp } from "./__core/app.js";
+import { auth } from "./auth.js";
+import { account } from "./routes/account.js";
+import { categories } from "./routes/categories.js";
+import { customers } from "./routes/customers.js";
+import { dashboard } from "./routes/dashboard.js";
+import { expenses } from "./routes/expenses.js";
+import { ping } from "./routes/ping.js";
+import { products } from "./routes/products.js";
+import { reports } from "./routes/reports.js";
+import { sales } from "./routes/sales.js";
 
 // API features are oRPC procedures, one file per feature in ./routes/,
 // composed into this router — typed end-to-end via the clients

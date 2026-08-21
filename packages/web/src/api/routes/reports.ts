@@ -1,9 +1,9 @@
 import { and, count, eq, gte, lt, sql, sum } from "drizzle-orm";
 import { z } from "zod";
-import { db } from "../database";
-import * as schema from "../database/schema";
-import { dayKeys, periodLabels, periodRange, periodSchema } from "../lib/period";
-import { business } from "../middleware/auth";
+import { db } from "../database/index.js";
+import * as schema from "../database/schema.js";
+import { business } from "../middleware/auth.js";
+import { dayKey, dayKeys, periodRange, periodSchema } from "../lib/period.js";
 
 function num(value: unknown) {
   return Number(value ?? 0);

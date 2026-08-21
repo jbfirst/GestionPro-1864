@@ -1,9 +1,9 @@
 import { ORPCError } from "@orpc/server";
 import { and, asc, count, eq } from "drizzle-orm";
 import { z } from "zod";
-import { db } from "../database";
-import * as schema from "../database/schema";
-import { business } from "../middleware/auth";
+import { db } from "../database/index.js";
+import * as schema from "../database/schema.js";
+import { business } from "../middleware/auth.js";
 
 const nameSchema = z.string().trim().min(2, "Le nom de la catégorie est trop court.").max(60);
 
